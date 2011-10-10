@@ -1,0 +1,9 @@
+Soubory k moji diplomce s nazvem Rozliseni clovek/robot na urovni HTTP pouzitelne pro omezeni DDOS utoku
+
+  * docs/ - dokumentace a samotna prace
+  * ruby/ - implementace(testovaci) filtru v Ruby
+  * nginx/ - implementace filtru jako modulu nginxu
+  * misc/ - ruzne soubory k tematu (testovaci data apod)
+
+Marek Aufart, aufi.cz@gmail.com
+
