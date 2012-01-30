@@ -1,0 +1,7 @@
+\select@language {english}
+\select@language {czech}
+\contentsline {chapter}{\numberline {1}\IeC {\'U}vod do problematiky}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivace pr\IeC {\'a}ce}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Z\IeC {\'a}v\IeC {\v e}r}{3}{chapter.2}
+\contentsline {chapter}{Literatura}{5}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Fungov\IeC {\'a}n\IeC {\'\i } OpenId}{7}{appendix.A}

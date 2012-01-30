@@ -1,0 +1,311 @@
+%% History:
+% Pavel Tvrdik (26.12.2004)
+%  + initial version for PhD Report
+%
+% Daniel Sykora (27.01.2005)
+%
+% Michal Valenta (3.12.2008)
+% rada zmen ve formatovani (diky M. Duškovi, J. Holubovi a J. Žďárkovi)
+% sjednoceni zdrojoveho kodu pro anglickou, ceskou, bakalarskou a diplomovou praci
+
+% One-page layout: (proof-)reading on display
+%%%% \documentclass[11pt,oneside,a4paper]{book}
+% Two-page layout: final printing
+\documentclass[11pt,twoside,a4paper]{book}   
+%=-=-=-=-=-=-=-=-=-=-=-=--=%
+% The user of this template may find useful to have an alternative to these 
+% officially suggested packages:
+\usepackage[czech, english]{babel}
+\usepackage[T1]{fontenc} % pouzije EC fonty 
+% pripadne pisete-li cesky, pak lze zkusit take:
+% \usepackage[OT1]{fontenc} 
+\usepackage[utf8]{inputenc}
+%=-=-=-=-=-=-=-=-=-=-=-=--=%
+% In case of problems with PDF fonts, one may try to uncomment this line:
+%\usepackage{lmodern}
+%=-=-=-=-=-=-=-=-=-=-=-=--=%
+%=-=-=-=-=-=-=-=-=-=-=-=--=%
+% Depending on your particular TeX distribution and version of conversion tools 
+% (dvips/dvipdf/ps2pdf), some (advanced | desperate) users may prefer to use 
+% different settings.
+% Please uncomment the following style and use your CSLaTeX (cslatex/pdfcslatex) 
+% to process your work. Note however, this file is in UTF-8 and a conversion to 
+% your native encoding may be required. Some settings below depend on babel 
+% macros and should also be modified. See \selectlanguage \iflanguage.
+%\usepackage{czech}  %%%%%\usepackage[T1]{czech} %%%%[IL2] [T1] [OT1]
+%=-=-=-=-=-=-=-=-=-=-=-=--=%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Styles required in your work follow %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+%\usepackage{indentfirst} %1. odstavec jako v cestine.
+
+\usepackage{k336_thesis_macros} % specialni makra pro formatovani DP a BP
+ % muzete si vytvorit i sva vlastni v souboru k336_thesis_macros.sty
+ % najdete  radu jednoduchych definic, ktere zde ani nejsou pouzity
+ % napriklad: 
+ % \newcommand{\bfig}{\begin{figure}\begin{center}}
+ % \newcommand{\efig}{\end{center}\end{figure}}
+ % umoznuje pouzit prikaz \bfig namisto \begin{figure}\begin{center} atd.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zvolte jednu z moznosti 
+% Choose one of the following options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \newcommand\TypeOfWork{Diplomová práce} \typeout{Diplomova prace}
+% \newcommand\TypeOfWork{Master's Thesis}   \typeout{Master's Thesis} 
+%\newcommand\TypeOfWork{Bakalářská práce}  \typeout{Bakalarska prace}
+% \newcommand\TypeOfWork{Bachelor's Project}  \typeout{Bachelor's Project}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zvolte jednu z moznosti 
+% Choose one of the following options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% nabidky jsou z: http://www.fel.cvut.cz/cz/education/bk/prehled.html
+
+%\newcommand\StudProgram{Elektrotechnika a informatika, dobíhající, Bakalářský}
+%\newcommand\StudProgram{Elektrotechnika a informatika, dobíhající, Magisterský}
+% \newcommand\StudProgram{Elektrotechnika a informatika, strukturovaný, Bakalářský}
+ \newcommand\StudProgram{Elektrotechnika a informatika, strukturovaný, Navazující magisterský}
+%\newcommand\StudProgram{Softwarové technologie a management, Bakalářský}
+% English study:
+% \newcommand\StudProgram{Electrical Engineering and Information Technology}  % bachelor programe
+% \newcommand\StudProgram{Electrical Engineering and Information Technology}  %master program
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zvolte jednu z moznosti 
+% Choose one of the following options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% nabidky jsou z: http://www.fel.cvut.cz/cz/education/bk/prehled.html
+
+%\newcommand\StudBranch{Výpočetní technika}   % pro program EaI bak. (dobihajici i strukt.)
+\newcommand\StudBranch{Výpočetní technika}   % pro prgoram EaI mag. (dobihajici i strukt.)
+%\newcommand\StudBranch{Softwarové inženýrství}            %pro STM
+%\newcommand\StudBranch{Web a multimedia}                  % pro STM
+%\newcommand\StudBranch{Computer Engineering}              % bachelor programe
+%\newcommand\StudBranch{Computer Science and Engineering}  % master programe
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vyplnte nazev prace, autora a vedouciho
+% Set up Work Title, Author and Supervisor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\WorkTitle{Rozlišení člověk/robot na úrovni HTTP použitelné pro omezení DDOS útoků}
+\newcommand\FirstandFamilyName{Marek Aufart}
+\newcommand\Supervisor{Ing. Alexandru Moucha}
+
+
+% Pouzijete-li pdflatex, tak je prijemne, kdyz bude mit vase prace
+% funkcni odkazy i v pdf formatu
+\usepackage[
+pdftitle={\WorkTitle},
+pdfauthor={\FirstandFamilyName},
+bookmarks=true,
+colorlinks=true,
+breaklinks=true,
+urlcolor=red,
+citecolor=blue,
+linkcolor=blue,
+unicode=true,
+]
+{hyperref}
+
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zvolte jednu z moznosti 
+% Choose one of the following options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{czech}
+%\selectlanguage{english} 
+
+% prikaz \typeout vypise vyse uvedena nastaveni v prikazovem okne
+% pro pohodlne ladeni prace
+
+
+\iflanguage{czech}{
+	 \typeout{************************************************}
+	 \typeout{Zvoleny jazyk: cestina}
+	 \typeout{Typ prace: \TypeOfWork}
+	 \typeout{Studijni program: \StudProgram}
+	 \typeout{Obor: \StudBranch}
+	 \typeout{Jmeno: \FirstandFamilyName}
+	 \typeout{Nazev prace: \WorkTitle}
+	 \typeout{Vedouci prace: \Supervisor}
+	 \typeout{***************************************************}
+	 \newcommand\Department{Katedra počítačů}
+	 \newcommand\Faculty{Fakulta elektrotechnická}
+	 \newcommand\University{České vysoké učení technické v Praze}
+	 \newcommand\labelSupervisor{Vedoucí práce}
+	 \newcommand\labelStudProgram{Studijní program}
+	 \newcommand\labelStudBranch{Obor}
+}{
+	 \typeout{************************************************}
+	 \typeout{Language: english}
+	 \typeout{Type of Work: \TypeOfWork}
+	 \typeout{Study Program: \StudProgram}
+	 \typeout{Study Branch: \StudBranch}
+	 \typeout{Author: \FirstandFamilyName}
+	 \typeout{Title: \WorkTitle}
+	 \typeout{Supervisor: \Supervisor}
+	 \typeout{***************************************************}
+	 \newcommand\Department{Department of Computer Science and Engineering}
+	 \newcommand\Faculty{Faculty of Electrical Engineering}
+	 \newcommand\University{Czech Technical University in Prague}
+	 \newcommand\labelSupervisor{Supervisor}
+	 \newcommand\labelStudProgram{Study Programme} 
+	 \newcommand\labelStudBranch{Field of Study}
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%    Poznamky ke kompletaci prace
+% Nasledujici pasaz uzavrenou v {} ve sve praci samozrejme 
+% zakomentujte nebo odstrante. 
+% Ve vysledne svazane praci bude nahrazena skutecnym 
+% oficialnim zadanim vasi prace.
+%{
+%\pagenumbering{roman} \cleardoublepage \thispagestyle{empty}
+%\chapter*{Na tomto místě bude oficiální zadání vaší práce}
+%\begin{itemize}
+%\item Toto zadání je podepsané děkanem a vedoucím katedry,
+%\item musíte si ho vyzvednout na studiijním oddělení Katedry počítačů na Karlově náměstí,
+%\item v jedné odevzdané práci bude originál tohoto zadání (originál zůstává po obhajobě na katedře),
+%\item ve druhé bude na stejném místě neověřená kopie tohoto dokumentu (tato se vám vrátí po obhajobě).
+%\end{itemize}
+%\newpage
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%    Titulni stranka / Title page 
+
+\coverpagestarts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%    Podekovani / Acknowledgements 
+
+\acknowledgements
+\noindent
+\par
+Chtěl bych poděkovat zejména 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%   Prohlaseni / Declaration 
+
+\declaration{V Praze dne 2.\,1.\,2012}
+%\declaration{In Kořenovice nad Bečvárkou on May 15, 2008}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Abstract 
+ 
+\abstractpage
+\noindent
+The aim of this thesis is to identify possibilities of the CMS Drupal for authentication of users and for other service activities. The result is a set of functions that support system for the administration of accreditation materials.
+
+% Prace v cestine musi krome abstraktu v anglictine obsahovat i
+% abstrakt v cestine.
+\vglue60mm
+
+\noindent{\Huge \textbf{Abstrakt}}
+\vskip 2.75\baselineskip
+
+\noindent
+\par
+Práce se zabývá využitím CMS Drupal jako základu frameworku pro aplikace školního intranetu. Obsahuje analýzu, jakým způsobem integrovat do CMS Drupal nové funkčnosti, s následnou implemetací. Zaměřuje se zejména na rozšíření funkcí, které CMS Drupal již obsahuje. Jde zejména o podporu ověřování uživatelů proti technologii Shibboleth a přidání funkcí potřebných pro systém vedení akreditačních materiálů.
+
+\par
+Cílem práce je zjištění možností CMS Drupal při ověřování uživatelů i jiných servisních činností. Výsledkem je sada funkcí podporujících systém pro vedení akreditačních materiálů.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Obsah / Table of Contents 
+
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Seznam obrazku / List of Figures 
+
+\listoffigures
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Seznam tabulek / List of Tables
+
+\listoftables
+
+
+%**************************************************************
+
+\mainbodystarts
+% horizontalní mezera mezi dvema odstavci
+%\parskip=5pt
+%11.12.2008 parskip + tolerance
+\normalfont
+\parskip=0.2\baselineskip plus 0.2\baselineskip minus 0.1\baselineskip
+
+% Odsazeni prvniho radku odstavce resi class book (neaplikuje se na prvni 
+% odstavce kapitol, sekci, podsekci atd.) Viz usepackage{indentfirst}.
+% Chcete-li selektivne zamezit odsazeni 1. radku nektereho odstavce,
+% pouzijte prikaz \noindent.
+
+%**************************************************************
+
+% Pro snadnejsi praci s vetsimi texty je rozumne tyto rozdelit
+% do samostatnych souboru nejlepe dle kapitol a tyto potom vkladat
+% pomoci prikazu \include{jmeno_souboru.tex} nebo \include{jmeno_souboru}.
+% Napr.:
+% \include{1_uvod}
+% \include{2_teorie}
+% atd...
+
+%*****************************************************************************
+\chapter{Úvod do problematiky}
+
+\section{Motivace práce}
+Poslední dobou se stále častěji objevuje úkol na řešení webového systému, který by umožňoval publikaci nebo správu určitých dat. Většina těchto systémů má velmi podobné zadání i požadavky na svůj běh. Velmi často se používají různé CMS, systémy pro správu obsahu nebo přímo `redakční systémy`. Takových CMS je mnoho, mají podobné rysy, ale mají různě řešené vnitřní funkce.
+\par
+Dalším důvodem práce je, že s rostoucím počtem různých webových služeb nebo komunit vzniká jako vedlejší efekt problém s množstvím přihlašovacích údajů na různé weby nebo služby. Uživatel by si měl pamatovat i desítky přihlašovacích údajů. Sice obvykle používá stejné přihlašovací jméno a někdy bohužel také heslo, ale to problém ještě prohlubuje až do oblasti bezpečnosti a ochrany údajů uživatele. Tuto situaci mají za cíl řešit technologie nazvané souhrnně SSO.
+
+
+%*****************************************************************************
+\chapter{Závěr}
+\noindent
+\par
+Práce se nakonec zabývala dvěma hlavními úkoly. První úkol se dá definovat jako řešení problému integrace nějaké další aplikace do CMS Drupal, tedy využití funkcí zmíněného CMS jako framework. Druhý úkol řeší ověřování uživatelů technologií SSO, v našem případě Shibboleth.
+\par
+V prvním úkolu se ukázalo, že použití funkcí CMS Drupal je při vývoji dalších aplikací s podobnými funkcemi velmi výhodné. Výslednou volbou byla tedy realizace takových aplikací jako modulů CMS Drupal. Použití vestavěných funkcí pro práci s databází umožňuje abstrakci nad druhem databáze a zjednodušení dotazů. Na velmi dobré úrovni použitelnosti jsou také funkce pro generování, validaci a ukládání formulářů. CMS Drupal se zde projevil jako framework, protože jeho funkce jsou široce použitelné a výborně dokumentované, což zjednodušuje práci s nimi. S formuláři souvisí administrační rozhraní, do kterého se právě přes další funkce CMS Drupal dá zakomponovat administrační pozadí vyvíjených aplikací.
+\par
+Integrace technologií SSO do CMS Drupal je zjednodušena tím, že existují pro Shibboleth a OpenId již vytvořené moduly. Vnitřní řešení uživatelských účtů v CMS Drupal zajišťuje, že každý uživatel má záznam v tabulce uživatelů bez ohledu na to, jestli se přihlašuje lokálně nebo prostřednictvím SSO. To je spolu s možností přiřazování uživatelům role (skupiny) způsob, jakým vyvíjené aplikace mají rozlišovat uživatele. Tato vlastnost se mi jeví jako výhoda a při vývoji pomohla vyjasnit rozdělení práce.
+\par
+Podstata druhého úkolu je v nastavení aplikace tak, aby uživatele rozlišovala na základě atributů předaných ověřovacími servery. Ukázalo se, že je rozumné rozřazovat uživatele podle organizace a jejich unikátního jména v rámci organizace. Ověřování uživatelů proti více Identity providerům může způsobit špatné rozřazování uživatelů z důvodu rozdílného nastavení předávaných atributů. Takže je vhodné navrhovat ověřování proti jednomu IdP. Nastavení práv v CMS Drupal přímo jednotlivým uživatelům je vhodné provádět ručně. Nastavování oprávnění přes role, do kterých jsou uživatelé přiřazování po přihlášení podle atributů, je zase vhodné pro přidělování skupinových práv například pro přístup ke studijním materiálům.
+
+
+%*****************************************************************************
+% Seznam literatury je v samostatnem souboru reference.bib. Ten
+% upravte dle vlastnich potreb, potom zpracujte (a do textu
+% zapracujte) pomoci prikazu bibtex a nasledne pdflatex (nebo
+% latex). Druhy z nich alespon 2x, aby se poresily odkazy.
+
+\bibliographystyle{abbrv}
+%bibliographystyle{plain}
+%\bibliographystyle{psc}
+{
+%JZ: 11.12.2008 Kdo chce mit v techto ukazkovych odkazech take odkaz na CSTeX:
+%\def\CS{$\cal C\kern-0.1667em\lower.5ex\hbox{$\cal S$}\kern-0.075em $}
+\bibliography{aufarmarreference}
+}
+
+%*****************************************************************************
+%*****************************************************************************
+\appendix
+%*****************************************************************************
+\chapter{Fungování OpenId}
+Níže je naznačen 
+
+
+
+\end{document}

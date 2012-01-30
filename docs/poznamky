@@ -1,0 +1,28 @@
+http://www.google.cz/search?sourceid=chrome&ie=UTF-8&q=machine+detection+on+webserver+(HTTP+level)+applicable+for+dealing+with+DDOS+attacks
+
+http://portal.acm.org/citation.cfm?id=1526896
+
+http://rise.cse.iitm.ac.in/wiki/images/2/2b/ML9.pdf
+
+
+
+
+
+
+
+
+
+Zdroje
+http://www.blacklotus.com/blog/
+http://portal.acm.org/citation.cfm?id=1645084
+
+Podívat se na:
+apache mod_regulate (trottle, bandwith asi míň - jen regulace, ale může se hodit)
+
+Nápady
+kontrolovat, jestli se stáhly prvky stránky, který obsahovat už stažený dokument (obrázky) neob u podezřelých požadavků přidat prvek a kontrolovat, jestli si o něj klient řekne, případně http tag redirect (->větší zátěž?), jestli soubor fakt přečte nebo jen stáhne
+
+
+Schůzka 16.3.2011 (Alex Moucha, Ondra ?, Kubr)
+Napsat Kubrovi (kontakt Bišek?), podívat se na cs katedru na rapidminer
+cisco IntruderDetectionSystem sáhne i do http hlaviček

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="79">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="anddos" root=".">
+      <in>ngx_http_anddos_module.c</in>
+    </df>
+    <df name="nginx-accesskey-2.0.3" root="../nginx-accesskey-2.0.3">
+      <in>ngx_http_accesskey_module.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>/usr/src/nginx-1.0.8/Makefile</itemPath>
+      <itemPath>/usr/src/nginx-1.0.8/configure</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+    <Elem>/usr/src/nginx-1.0.8</Elem>
+    <Elem>../nginx-accesskey-2.0.3</Elem>
+    <Elem>../../../Downloads/evanmiller-nginx_circle_gif-f7b6b5c</Elem>
+  </sourceRootList>
+  <projectmakefile>/usr/src/nginx-1.0.8/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>/usr/src/nginx-1.0.8</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
