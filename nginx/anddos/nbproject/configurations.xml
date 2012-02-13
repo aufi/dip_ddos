@@ -4,9 +4,6 @@
     <df name="anddos" root=".">
       <in>ngx_http_anddos_module.c</in>
     </df>
-    <df name="nginx-accesskey-2.0.3" root="../nginx-accesskey-2.0.3">
-      <in>ngx_http_accesskey_module.c</in>
-    </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false"
@@ -18,7 +15,7 @@
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
     <Elem>.</Elem>
-    <Elem>/usr/src/nginx-1.0.8</Elem>
+    <Elem>../../../nginx</Elem>
     <Elem>../nginx-accesskey-2.0.3</Elem>
     <Elem>../../../Downloads/evanmiller-nginx_circle_gif-f7b6b5c</Elem>
   </sourceRootList>

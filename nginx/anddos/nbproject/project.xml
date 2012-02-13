@@ -11,7 +11,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>.</sourceRootElem>
-                <sourceRootElem>/usr/src/nginx-1.0.8</sourceRootElem>
+                <sourceRootElem>../../../nginx</sourceRootElem>
                 <sourceRootElem>../nginx-accesskey-2.0.3</sourceRootElem>
                 <sourceRootElem>../../../Downloads/evanmiller-nginx_circle_gif-f7b6b5c</sourceRootElem>
             </sourceRootList>
